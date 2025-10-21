@@ -15,27 +15,26 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  {{-- Navbar (menu bar horizontal di bawah header) --}}
+  <!-- Navbar -->
   @include('layouts.navbar')
 
-    {{-- Header (misal berisi logo besar / judul aplikasi) --}}
-  @include('layouts.header')
- 
-  {{-- Sidebar --}}
+  <!-- Main Sidebar Container -->
   @include('layouts.sidebar')
 
-
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
     <section class="content">
-      @yield('content')
+      <div class="container-fluid mt-3">
+        @yield('content')
+      </div>
     </section>
   </div>
+</div>
 
-{{-- AdminLTE JS --}}
-<script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('AdminLTE/dist/js/adminlte.min.js') }}"></script>
-
-{{-- Tambahan JS jika ada --}}
-@stack('scripts')
+<!-- Scripts -->
+<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 </body>
+
 </html>
